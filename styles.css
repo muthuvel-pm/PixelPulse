@@ -276,6 +276,38 @@ h2 {
   align-items: start;
 }
 
+.card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(36, 55, 45, 0.06);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--soft-green);
+}
+
+.card p {
+  display: -webkit-box;
+  min-height: 3.2em;
+  margin: 0;
+  padding: 12px 14px;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 650;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 /* ---------- Empty state ---------- */
 .empty-state {
   display: flex;
@@ -289,6 +321,10 @@ h2 {
   border-radius: var(--radius);
   background: rgba(255, 254, 250, 0.55);
   text-align: center;
+}
+
+.empty-state[hidden] {
+  display: none;
 }
 
 .empty-icon {
