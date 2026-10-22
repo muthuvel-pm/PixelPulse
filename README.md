@@ -1,0 +1,3 @@
+# FrameFind
+
+FrameFind is a responsive image-search application designed to help users discover visual inspiration from different topics. I chose a warm cream background with forest-green accents to create a calm, nature-inspired identity that feels different from typical image-search interfaces. I used a large editorial-style hero section to make the app's purpose immediately clear and guide users toward the search bar. I also added suggestion chips and a dedicated empty state to make the interface more inviting before any search results are available.
