@@ -73,7 +73,6 @@ function render(items) {
   loadingState.hidden = true;
   emptyState.hidden = true;
 }
-
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const query = input.value.trim();
