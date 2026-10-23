@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelPulse</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ed">
+  <meta name="description" content="FrameFind helps you discover inspiring images from any topic.">
+  <title>FrameFind — Find your visual inspiration</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- UI goes here (next block) -->
-   <header>
-  <h1>PixelPulse</h1>
-  <form id="search-form">
-    <input id="search-input" type="search" placeholder="Search images..." />
-    <button type="submit">Search</button>
-  </form>
-</header>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="FrameFind home">
+      <span class="brand-mark" aria-hidden="true">F.</span>
+      <span>FrameFind</span>
+    </a>
+    <span class="header-note">A little inspiration goes a long way.</span>
+  </header>
 
-<main>
-  <p id="status"></p>
-  <section id="results"></section>
-</main>
+  <main class="page-content">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">YOUR NEXT IDEA STARTS HERE</p>
+      <h1 id="page-title">Find something<br><span>worth looking at.</span></h1>
+      <p class="hero-description">
+        Explore beautiful visuals, discover new perspectives,
+        and find inspiration for whatever you're creating.
+      </p>
+
+      <form id="search-form" class="search-form" role="search">
+        <label class="visually-hidden" for="search-input">
+          Search for images
+        </label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input
+          id="search-input"
+          name="q"
+          type="search"
+          placeholder="Try 'mountains at sunrise'..."
+          autocomplete="off"
+        >
+        <button id="search-button" class="search-button" type="button">
+          Search <span aria-hidden="true">↗</span>
+        </button>
+        <button id="clear-button" class="clear-button" type="reset">
+          Clear
+        </button>
+      </form>
+
+      <div class="suggestions" aria-label="Suggested search topics">
+        <span class="suggestions-label">TRY EXPLORING</span>
+        <button class="chip" type="button">Nature</button>
+        <button class="chip" type="button">Architecture</button>
+        <button class="chip" type="button">Wildlife</button>
+        <button class="chip" type="button">Minimalism</button>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow">YOUR VISUAL COLLECTION</p>
+          <h2 id="gallery-title">Explore the gallery</h2>
+        </div>
+        <span id="result-count" class="result-count">0 results</span>
+      </div>
+
+      <p id="empty-state" class="empty-state">
+        <span class="empty-icon" aria-hidden="true">✳</span>
+        <span class="empty-title">Your next discovery awaits.</span>
+        <span class="empty-description">
+          Search for a topic above to start exploring. Your images will appear here.
+        </span>
+      </p>
+
+      <!-- Part 2 will populate this empty grid with image cards. -->
+      <div id="results" class="results-grid" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>FrameFind</span>
+    <span>Made for the curious.</span>
+  </footer>
 
   <script src="script.js"></script>
 </body>
