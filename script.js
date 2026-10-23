@@ -81,6 +81,8 @@ form.addEventListener("submit", async (event) => {
     return;
   }
 
+
+  
   results.replaceChildren();
   emptyState.hidden = true;
   loadingState.hidden = false;
