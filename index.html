@@ -64,6 +64,11 @@
         <span id="result-count" class="result-count">0 results</span>
       </div>
 
+      <p id="loading-state" class="loading-state" role="status" aria-live="polite" hidden>
+        <span class="loading-spinner" aria-hidden="true"></span>
+        Searching for images…
+      </p>
+
       <p id="empty-state" class="empty-state">
         <span class="empty-icon" aria-hidden="true">✳</span>
         <span class="empty-title">Your next discovery awaits.</span>
@@ -72,7 +77,6 @@
         </span>
       </p>
 
-      <!-- Part 2 will populate this empty grid with image cards. -->
       <div id="results" class="results-grid" aria-live="polite"></div>
     </section>
   </main>
